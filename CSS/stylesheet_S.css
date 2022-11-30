@@ -1,0 +1,337 @@
+*{
+    box-sizing:border-box;
+}
+
+body{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    background-color: #70b7cc;
+    margin:0;
+    height: 100vh;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+}
+main{
+    margin: 1.5rem ;
+}
+
+/*--------------------*/
+/*  Mise en page de   */
+/*  l'entête du site  */
+/*--------------------*/
+
+header{
+    background-color: #023f52;
+    display: grid;
+    grid-template-columns: 1fr 100px;
+    grid-template-rows: 100px 70px;
+    align-items: center;
+}
+
+h1{
+    color: #FFF;
+    background-color: #023f52;
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-align: center;
+    padding: 0.5rem 0 0 0.5rem;
+    margin : 0;
+    grid-column: 1/2;
+    grid-row: 1/2;
+}
+
+/*-----------------------------------*/
+/* div pour affichage des options de */
+/*   connexion dans le header        */
+/*-----------------------------------*/
+
+.connect{
+    color: #FFF;
+    background-color: #023f52;
+    margin:0 auto;
+    padding: 0.5rem 0;
+    display: flex;
+    flex-direction: row;
+    grid-column: 1/3;
+    grid-row: 2/3;
+    text-align: center;
+}
+.etat{
+    display: flex;
+    align-items: center;
+}
+.etat>p{
+    margin:0;
+    padding:0.5rem;
+    display:block;
+}
+.diode{
+    display:block;
+    height: 15px;
+    width: 15px;
+}
+.deconnect{
+    color: #91e4fd;
+    text-decoration: none;
+    font-size: 0.8rem;
+    width: 110px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/*----------------------------------*/
+/*     Affichage des options de     */
+/*      navigation dans la nav      */
+/*----------------------------------*/
+
+nav{
+    grid-row: 1/2;
+    grid-column: 2/3;
+    height: 60px;
+}
+
+label#burger{
+    color: #FFF;
+    width: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    font-size: 40px;
+    cursor: pointer;
+}
+
+.nav-list{
+    display: none;
+    flex-direction: column;
+    height: 100px;
+    background: #023f52;
+    list-style-type:none;
+    padding:0;
+    margin:0;
+    justify-content: center;
+}
+.nav-li{
+    width: 50%;   
+}
+
+#toggle{
+    display: none;
+}
+#toggle:checked + .nav-list {
+    display: flex;
+}
+
+a.nav-link{
+    color: #91e4fd;
+    text-decoration: none;
+    font-size: 0.75rem;
+    padding: 0 10px;
+}
+
+a.nav-link.activer{
+    color: #FFF !important;
+    text-decoration: none;
+    font-size: 0.75rem;
+    padding: 0 10px;
+}
+
+a:hover{
+    color: #FFF;
+}
+
+/*-----------------------------------*/
+/* Affichage des messages d'erreurs  */
+/*       et messages flash           */
+/*-----------------------------------*/
+
+.alert-error{
+    grid-column: 1/3;
+    text-align: center;
+    background-color: #FFF;
+    font-weight: 600;
+    color: #910b28;
+}
+.alert-succes{
+    grid-column: 1/3;
+    text-align: center;
+    background-color: #FFF;
+    font-weight: 600;
+    color: #057748;
+}
+
+/*tableau d'erreur de la page inscription*/
+#errorRegister{
+    width: 100%;
+    color: #910b28;
+}
+
+/*---------------------------------*/
+/*        Mise en forme du         */
+/*    formulaire de connexion      */
+/*---------------------------------*/
+
+.index-form{
+    display: grid;
+    grid-template-rows: 60px 60px 30px;
+    align-items: center;
+}
+
+.identification>label{
+        display:inline-block;
+        width: 200px;
+        padding: 5px 0;
+        font-weight: 600;
+}
+
+/*-----------------------------------*/
+/*         Mise en forme du          */
+/*    formulaire de transaction      */
+/*-----------------------------------*/
+
+.transaction-form{
+    display: grid;
+    grid-template-rows: 60px 60px 60px 60px 60px;
+    align-items: center;
+}
+
+.divForm>label{
+    display:inline-block;
+    width: 180px;
+    padding: 5px 0;
+    font-weight: 600;
+}
+
+.input-item{
+    text-align: center;
+    width:210px;
+}
+
+/*-----------------------------------*/
+/*         Mise en forme du          */
+/*     formulaire d'inscription      */
+/*-----------------------------------*/
+
+.inscription-form{
+    display: grid;
+    grid-template-rows: 60px 60px 60px 60px 60px;
+    align-items: center;
+}
+
+.inscription>label{
+        display:inline-block;
+        width: 250px;
+        padding: 5px 0;
+        font-weight: 600;
+}
+
+/*----------------------------------------*/
+/*            Mise en forme du            */
+/*     formulaire mot de passe oublié     */
+/*----------------------------------------*/
+
+.forget-form{
+    display: grid;
+    grid-template-rows: 60px 60px;
+}
+.forget>label{
+    display:inline-block;
+    width: 250px;
+    padding: 5px 0;
+    font-weight: 600;
+}
+
+/*-----------------------------------*/
+/*          Mise en forme du         */
+/*      formulaire de changement     */
+/*          de mot de passe          */
+/*-----------------------------------*/
+
+.change-form{
+    display: grid;
+    grid-template-rows: 60px 60px 60px;
+}
+.change>label{
+    display:inline-block;
+    width: 300px;
+    padding: 5px 0;
+    font-weight: 600;
+}
+
+/*-----------------------------------*/
+/*    Mise en forme du formulaire    */
+/*        de réinitialisation        */
+/*           du mot de passe         */
+/*-----------------------------------*/
+
+.reset-form{
+    display: grid;
+    grid-template-rows: 60px 60px 60px;
+}
+.creset>label{
+    display:inline-block;
+    width: 300px;
+    padding: 5px 0;
+    font-weight: 600;
+}
+
+/*-----------------------------------*/
+/*         Mise en forme du          */
+/*      bouton des formulaires       */
+/*-----------------------------------*/
+
+.button{
+    background-color: #023f52;
+    color: #fff;
+    border-color: #fff;border-width: 0.5px;
+    border-radius: 4px;
+    font-weight: 400;
+    height: 30px;
+    min-width: 80px;
+
+}
+.divButton{
+    display: flex;
+    align-items: center;
+}
+
+/*-------------------------------------*/
+/*  MISE EN FORME DE LA PAGE SYNTHESE  */
+/*-------------------------------------*/
+
+/*----------------------------*/
+/*  Pour l'affichage synthèse */
+/*   uniquement en desktop    */
+/*----------------------------*/
+
+.syntheseON{
+    display: none;
+}
+
+/*----------------------------*/
+/*  Mise en forme du footer   */
+/*----------------------------*/
+
+footer{
+    color: #FFF;
+    background-color: #023f52;
+    font-size: 0.75rem;
+    font-style: italic;
+    margin : 0;
+    padding: 1.5rem 2.5rem;
+    text-align: center;
+}
+
+.footer{
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
